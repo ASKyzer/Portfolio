@@ -1,0 +1,132 @@
+body {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+/* GRID template area layout */
+.landing-wrapper {
+  background-color: #122626;
+  height: 100vh;
+  width: 100%;
+  grid-gap: 5px;
+  display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+    ". . . . . . . . . . . ."
+    ". . . . . . . . a a a ."
+    ". . . . . . . . a a a ."
+    ". . . m m m m m a a a ."
+    ". . . m m m m m c c e e"
+    "p p p m m m m m c c . ."
+    "p p p m m m m m . . . ."
+    "p p p . . . . . . . . ."
+    /* ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ." */
+    ;
+}
+  .about {
+    grid-area: a;
+    background-image: url("me.jpg");
+    background-size: cover;
+  }
+  .portfolio {
+    background-image: url("port.jpg");
+      background-size: cover;
+    grid-area: p;
+  }
+  .contact {
+    background: url("contact.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-area: c;
+  }
+  .center {
+    background: url("burn.jpg");
+    background-size: cover;
+    grid-area: m;
+    position: relative;
+  }
+  .extra {
+    background: url("port.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-area: e;
+  }
+/*************************************/
+
+/* Fixed bookmark logo with initial */
+.bookmark {
+  height: 0;
+  width: 0;
+  position: fixed;
+    left: 20px;
+    top: 0px;
+  border-top: 100px solid rgba(255, 255, 255, 0.5);
+  border-left: 50px solid rgba(255, 255, 255, 0.5);
+  border-right: 50px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 50px solid transparent;
+  z-index: 5;
+}
+.A, .K {
+  font-family: 'Combo', cursive;
+  font-size: 6em;
+  position: fixed;
+    top: -10px;
+  z-index: 10;
+}
+.A {
+  color: #fff;
+  left: 22px;
+  text-shadow: 2px 2px pink;
+
+}
+.K {
+  color: yellow;
+  left: 61px;
+  text-shadow: 2px 2px white;
+
+}
+/*************************************/
+
+/* NAME on landing page */
+.name {
+  color: yellow;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 84px;
+  text-shadow: 2px 2px white;
+}
+
+.first {
+  position: absolute;
+    bottom: -115px;
+    left: 90px;
+}
+.middle {
+  position: absolute;
+    bottom: -185px;
+    left: 130px;
+}
+.last {
+  position: absolute;
+    bottom: -255px;
+    left: 170px;
+}
+.initial {
+  color: white;
+  text-shadow: 2px 2px pink;
+}
+/************************************/
+
+/* CONTENT styling */
+.portfolio, .about, .contact {
+  color: #fff;
+  font-family: 'Combo', cursive;
+  font-size: 2em;
+  text-shadow: 2px 2px black;
+
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
