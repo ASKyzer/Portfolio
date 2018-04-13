@@ -27,32 +27,50 @@ body {
   .about {
     grid-area: a;
     background-image: url("me.jpg");
-    background-size: cover;
-  }
-  .portfolio {
-    background-image: url("port.jpg");
-      background-size: cover;
+      background-size: 100%;
       background-position: center;
+    transition: 500ms;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8)
+  }
+    .about:hover {
+      background-size: 130%;
+    }
+  .portfolio {
     grid-area: p;
+    background-image: url("port.jpg");
+      background-size: 170%;
+      background-position: center;
+    transition: 500ms;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8)
   }
+    .portfolio:hover {
+      background-size: 230%;
+    }
   .contact {
-    background: url("contact.jpg");
-    background-size: cover;
-    background-position: center;
     grid-area: c;
+    background: url("contact.jpg");
+      background-size: 190%;
+      background-position: center;
+    transition: 500ms;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5)
   }
+    .contact:hover {
+      background-size: 240%;
+    }
   .center {
+    grid-area: m;
     background: url("burn.jpg");
     background-size: cover;
     background-position: center;
-    grid-area: m;
     position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5)
   }
   .extra {
+    grid-area: e;
     background: url("extra.jpg");
     background-size: cover;
     background-position: center;
-    grid-area: e;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5)
   }
 /*************************************/
 
@@ -77,17 +95,15 @@ body {
     top: -10px;
   z-index: 10;
 }
-.A {
-  color: #fee9ba;
-  left: 22px;
-  text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
-
-}
-.K {
+  .A {
+    color: #fee9ba;
+    left: 22px;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
+  }
+  .K {
   color: #ffc901;
   left: 61px;
   text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
-
 }
 /*************************************/
 
@@ -96,25 +112,24 @@ body {
   color: #ffc901;
   font-family: 'Fjalla One', sans-serif;
   font-size: 84px;
-  text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
+  text-shadow: 3px 3px rgba(255, 255, 255, 0.7);
 }
-
-.first {
-  position: absolute;
-    bottom: -115px;
-    left: 90px;
-}
-.middle {
-  position: absolute;
-    bottom: -185px;
-    left: 130px;
-}
-.last {
-  position: absolute;
-    bottom: -255px;
-    left: 170px;
-}
-.initial {
+  .first {
+    position: absolute;
+      bottom: -115px;
+      left: 90px;
+  }
+  .middle {
+    position: absolute;
+      bottom: -185px;
+      left: 130px;
+  }
+  .last {
+    position: absolute;
+      bottom: -255px;
+      left: 170px;
+  }
+  .initial {
   color: #fee9ba;
   text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
 }
@@ -126,10 +141,9 @@ body {
   font-family: 'Combo', cursive;
   font-size: 2em;
   text-shadow: 2px 2px black;
-
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 @media(max-width: 700px) {
