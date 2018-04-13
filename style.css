@@ -21,9 +21,7 @@ body {
     "p p p m m m m m c c . ."
     "p p p m m m m m . . . ."
     "p p p . . . . . . . . ."
-    /* ". . . . . . . . . . . ."
     ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ." */
     ;
 }
   .about {
@@ -34,6 +32,7 @@ body {
   .portfolio {
     background-image: url("port.jpg");
       background-size: cover;
+      background-position: center;
     grid-area: p;
   }
   .contact {
@@ -45,11 +44,12 @@ body {
   .center {
     background: url("burn.jpg");
     background-size: cover;
+    background-position: center;
     grid-area: m;
     position: relative;
   }
   .extra {
-    background: url("port.jpg");
+    background: url("extra.jpg");
     background-size: cover;
     background-position: center;
     grid-area: e;
@@ -60,7 +60,7 @@ body {
 .bookmark {
   height: 0;
   width: 0;
-  position: fixed;
+  position: absolute;
     left: 20px;
     top: 0px;
   border-top: 100px solid rgba(255, 255, 255, 0.5);
@@ -69,6 +69,7 @@ body {
   border-bottom: 50px solid transparent;
   z-index: 5;
 }
+
 .A, .K {
   font-family: 'Combo', cursive;
   font-size: 6em;
@@ -77,25 +78,25 @@ body {
   z-index: 10;
 }
 .A {
-  color: #fff;
+  color: #fee9ba;
   left: 22px;
-  text-shadow: 2px 2px pink;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
 
 }
 .K {
-  color: yellow;
+  color: #ffc901;
   left: 61px;
-  text-shadow: 2px 2px white;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
 
 }
 /*************************************/
 
 /* NAME on landing page */
 .name {
-  color: yellow;
+  color: #ffc901;
   font-family: 'Fjalla One', sans-serif;
   font-size: 84px;
-  text-shadow: 2px 2px white;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
 }
 
 .first {
@@ -114,8 +115,8 @@ body {
     left: 170px;
 }
 .initial {
-  color: white;
-  text-shadow: 2px 2px pink;
+  color: #fee9ba;
+  text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
 }
 /************************************/
 
@@ -129,4 +130,54 @@ body {
   display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media(max-width: 700px) {
+  .landing-wrapper {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+      "  . . p p p p . . . ."
+      "  . . p p p p . . . ."
+      "  . . p p p p a a a a"
+      "  e e e e . . a a a a"
+      "  . m m m m m a a a a"
+      "  . m m m m m c c c ."
+      "  . m m m m m c c c ."
+      "  . m m m m m . . . ."
+      "  . . . . . . . . . ."
+      "  . . . . . . . . . . "
+    ;
+  }
+  .first {
+    position: absolute;
+      bottom: -115px;
+      left: -40px;
+  }
+  .middle {
+    position: absolute;
+      bottom: -185px;
+      left: -5px;
+  }
+  .last {
+    position: absolute;
+      bottom: -255px;
+      left: 40px;
+  }
+
+  /* put bookmark on the right side */
+  .bookmark {
+    left: auto;
+    right: 20px;
+  }
+  .A, .K {
+  }
+  .A {
+    left: auto;
+    right: 66px;
+  }
+  .K {
+    left: auto;
+    right: 32px;
+  }
 }
