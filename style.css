@@ -487,7 +487,7 @@ body {
   bottom: 0;
   }
 
-@media screen and (max-device-width: 700px) {
+@media only screen and (max-width: 700px), screen and (max-device-width: 700px) {
 
   .landing-wrapper {
     grid-template-columns: repeat(10, 1fr);
@@ -598,7 +598,7 @@ body {
 
 }
 
-@media screen and (max-device-width: 500px) {
+@media only screen and (max-width: 500px), screen and (max-device-width: 500px) {
   #contact-box {
     padding: 0;
     margin: 0;
