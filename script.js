@@ -34,3 +34,8 @@ $("#con").click(function() {
         scrollTop: $("#contact-me").offset().top
     }, 1000);
   });
+  $("#cont").click(function() {
+      $('html, body').animate({
+          scrollTop: $("#contact-me").offset().top
+      }, 1000);
+    });
