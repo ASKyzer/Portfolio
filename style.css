@@ -7,7 +7,7 @@ body {
 /* GRID template area layout */
 .landing-wrapper {
   grid-gap: 7px;
-  height: 100vh;
+  height: 105vh;
   width: 100%;
   display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -165,7 +165,7 @@ body {
   position: relative;
   text-shadow: 2px 2px rgba(11, 11, 11, 0.7);
 }
-.c, .h, .nav-a, .p {
+#c, #h, #nav-a, #p {
   /* color: white; */
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
@@ -181,37 +181,41 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.7)
 
 }
-  .c {
+  #c {
     bottom: 135px;
     right: 10px;
     color: #fee9ba;
   }
-    .c:hover {
+    #c:hover {
       background-color: magenta;
       color: white;
+      cursor: pointer;
     }
-  .h {
+  #h {
     bottom: 80px;
     right: 10px;
   }
-  .h:hover {
+  #h:hover {
     background-color: yellow;
     color: white;
+    cursor: pointer;
   }
-  .nav-a {
+  #nav-a {
     bottom: 25px;
     right: 10px;
   }
-    .nav-a:hover {
+    #nav-a:hover {
       background-color: coral;
       color: white;
+      cursor: pointer;
     }
-  .p {
+  #p {
     right: 10px;
   }
-    .p:hover {
+    #p:hover {
       background-color: lime;
       color: white;
+      cursor: pointer;
     }
 
 /* ABOUT ME SECTION */
@@ -229,7 +233,7 @@ body {
   font-size: 18px;
   grid-area: content;
   padding: 1.75em;
-  padding-bottom: 10em;
+  padding-bottom: 5em;
   position: relative;
   /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); */
 }
@@ -269,30 +273,174 @@ body {
 }
 
 .social-media a {
-  color: teal;
+  color: magenta;
   font-size: 18px;
   text-decoration: none;
   transition: .25s;
 }
   .social-media a:hover {
-    color: #eee;
+    color: #eeefff;
   }
+
+  /* PORTFOLIO */
+
+  .my-work, .contact-me {
+    color: #ffc901;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 84px;
+    height: 150px;
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7);
+    position: relative;
+  }
+  .work-title p::first-letter,  .contact-me p::first-letter{
+    color: #fee9ba;
+  }
+  .my, .send {
+    position: absolute;
+      left: 30%;
+  }
+  .port, .message {
+    position: absolute;
+    top: 67px;
+    left: 35%;
+  }
+  .message {
+    top: 71px;
+    left: 33%;
+  }
+
+  .mosaic-container {
+    box-shadow: 0 0 50px rgba(11, 11, 11, 0.8);
+  display: grid;
+  height: 100vh;
+  margin-top: 200px;
+  grid-gap: 12px;
+  grid-template-rows: repeat(1fr 1fr 1fr 1fr 1fr 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+.mosaic-container .grid-item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+.grid-item:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.grid-item a {
+  height: 100%;
+  width: 100%;
+}
+.mosaic-container .one {
+  background: url("linkup.png");
+  background-size: cover;
+  background-position: top;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.mosaic-container .two {
+  background: url("bandit.png");
+  background-size: cover;
+  background-position: center;
+  grid-row: span 3;
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+.mosaic-container .three {
+  background: url("memory.png");
+  background-size: cover;
+  background-position: top;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.mosaic-container .four {
+  background: url("burger.png");
+  background-size: cover;
+  background-position: top;
+  grid-row: span 1;
+  grid-column: 3 / 4;
+}
+.mosaic-container .five {
+  background: url("adriankyzer.png");
+  background-size: cover;
+  background-position: center;
+  grid-row: span 4;
+  grid-column: span 2;
+}
+
+.mosaic-container .six {
+  background: url("friends.png");
+  background-size: cover;
+  background-position: center;
+  grid-row: span 3;
+  grid-column: span 3;
+}
+/*
+.line-container .template-area {
+  background: cyan;
+}
+
+.line-container .row {
+  background: violet;
+}
+
+.line-container .column {
+  background: pink;
+}
+
+.grid-item {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+  padding: 20px;
+} */
+
+/* Custom classes for sizing */
+
+.square-sm {
+  grid-row: span 1;
+  grid-column: span 2;
+}
+
+.square-md {
+  grid-row: span 2;
+  grid-column: span ;
+}
+
+.square-lg {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+.wide {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.tall {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
 
   /* CONTACT FORM */
 
   #contact-box {
-    margin-top: 100px;
+    margin-top: 200px;
     background: #ffc901;
-    padding: 30px;
+    padding: 60px;
     color: white;
   }
 
   .contact-form {
-    background: black;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     color: teal;
     font-size: 22px;
-    padding: 15px 10px;
-    width: 60%;
+    padding: 45px 15px;
+    width: 70%;
   }
 
   .contact-form form {
@@ -301,21 +449,33 @@ body {
   }
 
   form input {
-    background: transparent;
-    border-bottom: 1px solid black;
-    border: none;
-    height: 40px;
+    background: #fee9ba50;
+    border-style: 1px solid white;
+    height: 30px;
     margin: 5px
   }
 
   form textarea {
-    background: transparent;
-    border: none;
+    background: #fee9ba50;
+    margin: 5px;
   }
 
   .submit-btn {
-    color: white;
+    background-color: #122626;
+    color: #ffc901;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 54px;
+    height: 100px;
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.7);
+    width: 98%;
+    margin-top: 50px;
+
   }
+
+  button::first-letter{
+    color: #fee9ba;
+  }
+
 
 @media(max-width: 700px) {
   .landing-wrapper {
@@ -388,4 +548,50 @@ body {
     padding-right: 0;
   }
 
+  .contact-form {
+    width: 90%;
+  }
+  .my, .send {
+    position: absolute;
+      left: 20%;
+  }
+  .port, .message {
+    position: absolute;
+    top: 67px;
+    left: 25%;
+  }
+  .message {
+    top: 71px;
+    left: 23%;
+  }
+  .empty {
+    height: 25px;
+  }
+
+}
+
+@media(max-width: 500px) {
+  #contact-box {
+    padding: 0;
+    margin: 0;
+    margin-top: 200px;
+  }
+  .contact-form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .my, .send {
+    position: absolute;
+      left: 10%;
+  }
+  .port, .message {
+    position: absolute;
+    top: 67px;
+    left: 15%;
+  }
+  .message {
+    top: 71px;
+    left: 13%;
+  }
 }
