@@ -2,13 +2,13 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  background-color: #122626;
 }
 /* GRID template area layout */
 .landing-wrapper {
-  background-color: #122626;
+  grid-gap: 7px;
   height: 100vh;
   width: 100%;
-  grid-gap: 5px;
   display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -21,30 +21,38 @@ body {
     "p p p m m m m m c c . ."
     "p p p m m m m m . . . ."
     "p p p . . . . . . . . ."
-    ". . . . . . . . . . . ."
+    /* ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ." */
     ;
 }
   .about {
     grid-area: a;
     background-image: url("me.jpg");
-      background-size: 100%;
-      background-position: center;
-    transition: 500ms;
+      background-size: 170%;
+      background-position: top;
+    transition: 1000ms;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.8)
   }
     .about:hover {
-      background-size: 130%;
+      background-position:bottom;
+      color: teal;
+      cursor: pointer;
+      font-size: 44px;
     }
   .portfolio {
     grid-area: p;
     background-image: url("port.jpg");
       background-size: 170%;
       background-position: center;
-    transition: 500ms;
+    transition: 1000ms;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.8)
   }
     .portfolio:hover {
-      background-size: 230%;
+      background-size: 270%;
+      background-position: left;
+      color: coral;
+      cursor: pointer;
+      font-size: 44px;
     }
   .contact {
     grid-area: c;
@@ -55,7 +63,10 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5)
   }
     .contact:hover {
-      background-size: 240%;
+      background-size: 290%;
+      color: #c67665;
+      cursor: pointer;
+      font-size: 44px;
     }
   .center {
     grid-area: m;
@@ -72,16 +83,20 @@ body {
     background-position: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5)
   }
+.about, .contact, .extra, .center, .portfolio {
+  border-radius: 10px;
+}
 /*************************************/
 
 /* Fixed bookmark logo with initial */
 .bookmark {
   height: 0;
   width: 0;
-  position: absolute;
+  position: fixed;
     left: 20px;
     top: 0px;
   border-top: 100px solid rgba(255, 255, 255, 0.5);
+  /* border-top: 100px solid transparent; */
   border-left: 50px solid rgba(255, 255, 255, 0.5);
   border-right: 50px solid rgba(255, 255, 255, 0.5);
   border-bottom: 50px solid transparent;
@@ -93,17 +108,16 @@ body {
   font-size: 6em;
   position: fixed;
     top: -10px;
+  text-shadow: 2px 2px rgba(11, 11, 11, 0.7);
   z-index: 10;
 }
   .A {
     color: #fee9ba;
     left: 22px;
-    text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
   }
   .K {
   color: #ffc901;
   left: 61px;
-  text-shadow: 2px 2px rgba(255, 255, 255, 0.5);
 }
 /*************************************/
 
@@ -145,6 +159,163 @@ body {
   justify-content: center;
   align-items: center;
 }
+/*  NAV ITEMS */
+.nav-items {
+  color: #ffc901;
+  position: relative;
+  text-shadow: 2px 2px rgba(11, 11, 11, 0.7);
+}
+.c, .h, .nav-a, .p {
+  /* color: white; */
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  font-size: 36px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  position: fixed;
+    bottom: -30px;
+    transition: 500ms;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7)
+
+}
+  .c {
+    bottom: 135px;
+    right: 10px;
+    color: #fee9ba;
+  }
+    .c:hover {
+      background-color: magenta;
+      color: white;
+    }
+  .h {
+    bottom: 80px;
+    right: 10px;
+  }
+  .h:hover {
+    background-color: yellow;
+    color: white;
+  }
+  .nav-a {
+    bottom: 25px;
+    right: 10px;
+  }
+    .nav-a:hover {
+      background-color: coral;
+      color: white;
+    }
+  .p {
+    right: 10px;
+  }
+    .p:hover {
+      background-color: lime;
+      color: white;
+    }
+
+/* ABOUT ME SECTION */
+/* ABOUT ME */
+#about-me {
+  display: grid;
+  font-family: 'Montserrat Alternates', sans-serif;
+  grid-template-columns: 90px 4fr minmax(200px, 1.5fr) 90px;
+  grid-template-areas: ". content info .";
+  margin-top: 50px;
+  min-height: 676px;
+}
+.me-content {
+  background: #fee9ba;
+  font-size: 18px;
+  grid-area: content;
+  padding: 1.75em;
+  padding-bottom: 10em;
+  position: relative;
+  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); */
+}
+
+.me-title {
+  color: #c67665;
+
+}
+.me-info {
+  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); */
+  background: #ffc901;
+  grid-area: info;
+  padding: 1.4em;
+}
+
+.me-content img {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  max-width: 200px;
+  position: absolute;
+    top: -70px;
+    right: -130px;
+}
+
+.me-title {
+  font-size: 34px;
+  padding-right: 1.2em;
+}
+/*********************************/
+/* SOCIAL MEDIA */
+.empty {
+  height: 125px;
+}
+
+.info-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.social-media a {
+  color: teal;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .25s;
+}
+  .social-media a:hover {
+    color: #eee;
+  }
+
+  /* CONTACT FORM */
+
+  #contact-box {
+    margin-top: 100px;
+    background: #ffc901;
+    padding: 30px;
+    color: white;
+  }
+
+  .contact-form {
+    background: black;
+    color: teal;
+    font-size: 22px;
+    padding: 15px 10px;
+    width: 60%;
+  }
+
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {
+    background: transparent;
+    border-bottom: 1px solid black;
+    border: none;
+    height: 40px;
+    margin: 5px
+  }
+
+  form textarea {
+    background: transparent;
+    border: none;
+  }
+
+  .submit-btn {
+    color: white;
+  }
 
 @media(max-width: 700px) {
   .landing-wrapper {
@@ -159,8 +330,8 @@ body {
       "  . m m m m m c c c ."
       "  . m m m m m c c c ."
       "  . m m m m m . . . ."
-      "  . . . . . . . . . ."
-      "  . . . . . . . . . . "
+      /* "  . . . . . . . . . ."
+      "  . . . . . . . . . . " */
     ;
   }
   .first {
@@ -184,8 +355,7 @@ body {
     left: auto;
     right: 20px;
   }
-  .A, .K {
-  }
+
   .A {
     left: auto;
     right: 66px;
@@ -194,4 +364,28 @@ body {
     left: auto;
     right: 32px;
   }
+
+  /* ABOUT ME */
+  #about-me {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    grid-template-areas: "content" "info";
+    margin-top: 70px;
+  }
+  .me-pic {
+    display: flex;
+    justify-content: center;
+  }
+  .me-content img {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    max-height: 250px;
+    margin-top: 30px;
+    position: static;
+  }
+  .me-title {
+    font-size: 26px;
+    padding-right: 0;
+  }
+
 }
