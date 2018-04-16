@@ -605,23 +605,25 @@ body {
     margin-top: 150px;
   }
   .contact-form {
-    width: 100%;
+    width: 96%;
     margin: 0px;
-    padding: 40px 0 100px 0;
+    padding: 40px 2% 100px 2%;
   }
   .my, .send {
     font-size: 64px;
     position: absolute;
-      left: 10%;
+      left: 25%;
   }
   .port, .message {
     font-size: 64px;
     position: absolute;
     top: 54px;
-    left: 20%;
+    left: 28%;
   }
   .message {
     top: 53px;
-    left: 17%;
+    left: 27%;
   }
+  .my-work {
+    height: 100px;}
 }
