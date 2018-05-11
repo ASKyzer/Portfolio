@@ -377,6 +377,16 @@ body {
   grid-row: span 3;
   grid-column: span 3;
 }
+
+.mosaic-container .fiveoclock {
+  background: url("fiveoclock.png");
+  background-size: cover;
+  background-position: top;
+  grid-row: span 3;
+  grid-column: span 6;
+}
+
+
 /*
 .line-container .template-area {
   background: cyan;
