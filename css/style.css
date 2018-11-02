@@ -55,6 +55,43 @@ nav {
   cursor: pointer;
   border-bottom: 3px solid #f2ad58;
 }
+/* 
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+} */
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+
+ /* @-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+} */
+
 
 .nav-logo {
   z-index: 9999;
@@ -65,7 +102,7 @@ nav {
 }
 
 .bg {
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +117,7 @@ nav {
 
 .container {
   font-family: 'Sari', 'Roboto', sans-serif;
+  /* max-width: 1200px;; */
 }
 
 .adrian {
@@ -89,6 +127,7 @@ nav {
   position: absolute;
   top: 100px;
   left: 13px;
+  /* letter-spacing: 1.1px; */
 }
 
 .kyzer {
@@ -119,7 +158,6 @@ nav {
   font-weight: bold;
   color: #f0e7cc;
   margin-bottom: 10px;
-  z-index: 9999;
 }
 
 /* 
